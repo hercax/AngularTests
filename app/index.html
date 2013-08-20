@@ -27,14 +27,14 @@
 					<button type="button" class="btn btn-info btn-xs" ng-click="login()">Log in</button>
 				</p>
 				<p ng-show="user" class="navbar-text pull-right">
-					Signed in as <a href="#" class="navbar-link">{{user.first_name + ' ' + user.last_name}}</a>
+					Signed in as <a href="#" class="navbar-link" ng-click="logout()">{{user.first_name + ' ' + user.last_name}}</a>
 				</p>
 			</nav>
 		</div>
 	</header>
 
 	<div ng-controller='MainCtrl' class="container">
-		{{greeting}}
+		{{user | json}}
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
