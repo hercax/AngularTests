@@ -9,32 +9,32 @@
 </head>
 <body>
 
-	<!-- Docs master nav -->
-	<header class="navbar navbar-inverse navbar-static-top" role="navigation" ng-controller='NavCtrl'>
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand">AngularTests</a>
-			</div>
-			<!-- <nav class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="#">Getting started</a>
-					</li>					
-				</ul>
-			</nav> -->
-			<nav class="collapse navbar-collapse">
-				<p ng-hide="user" class="navbar-text pull-right">
-					<button type="button" class="btn btn-info btn-xs" ng-click="login()">Log in</button>
-				</p>
-				<p ng-show="user" class="navbar-text pull-right">
-					Signed in as <a href="#" class="navbar-link" ng-click="logout()">{{user.first_name + ' ' + user.last_name}}</a>
-				</p>
-			</nav>
+	<!-- Master nav -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation" ng-controller='NavCtrl'>
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">AngularTests</a>
 		</div>
-	</header>
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">Chat</a>
+				</li>					
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<p ng-hide="user()" class="navbar-text pull-right">
+						<button type="button" class="btn btn-info btn-xs" ng-click="login()">Log in</button>
+					</p>
+					<p ng-show="user()" class="navbar-text pull-right">
+						Signed in as <a href="#" class="navbar-link" ng-click="logout()">{{user().first_name + ' ' + user().last_name}}</a>&nbsp;&nbsp;
+					</p>
+				</li>					
+			</ul>
+		</div>
+	</nav>
 
 	<div ng-controller='MainCtrl' class="container">
-		{{user | json}}
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
