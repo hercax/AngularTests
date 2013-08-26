@@ -10,7 +10,7 @@
 <body>
 
 	<!-- Master nav -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation" ng-controller='NavCtrl'>
+	<nav class="navbar navbar-default navbar-static-top" role="navigation" ng-controller='NavCtrl'>
 		<div class="navbar-header">
 			<a href="#" class="navbar-brand">AngularTests</a>
 		</div>
@@ -35,6 +35,18 @@
 	</nav>
 
 	<div ng-controller='MainCtrl' class="container">
+		<div class="col-md-2"></div>
+		<div class="col-md-10">
+			<form role="form" class="form-horizontal">
+				<div class="form-group">
+					<label for="favUrl" class="col-md-2 control-label">URL</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="favUrl" placeholder="URL to save...">
+					</div>
+				</div>
+			</form>
+
+		</div>
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
